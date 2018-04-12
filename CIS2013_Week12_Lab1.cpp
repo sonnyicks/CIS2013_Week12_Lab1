@@ -36,17 +36,33 @@ class Human {
 		}
 		
 };
+//inheritance
+class Man: public Human {//Man inherits pieces from these other classes
+	public:
+		bool hasEgo = true;
+		string pee = "standing";
+};
+
+class Woman: public Human {//Man inherits pieces from these other classes
+	public:
+		bool hasEgo = false;
+		string pee = "sitting";
+};
 
 int main(){
 	
-	Human bob;
-	Human sue;
+	Man bob;
+	Woman sue;
 	
 	cout << bob.name << " has " << bob.getLegs() << " legs and " << bob.getArms() 
 		 << " arms and their hair color is " << bob.hair << endl;
 		 
+	cout << bob.name << " has an ego?" << bob.hasEgo << " and pees " 
+		 << bob.pee << endl;
+		 
 	cout << sue.name << " has " << sue.getLegs() << " legs and " << sue.getArms() 
 		 << " arms and their hair color is " << sue.hair;
+	cout << sue.name << " has an ego? " << sue.hasEgo;
 	
 	
 	return 0;
